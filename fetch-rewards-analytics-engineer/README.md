@@ -60,6 +60,6 @@ A message template in `/communication/stakeholder_message.md` explains key findi
 
 ## 👋 Contact
 
-Prepared by: *Your Name*  
-GitHub: [@yourusername](https://github.com/yourusername)
+Prepared by: *Zhengwu Fang*  
+GitHub: [@ZhengwuFang1](https://github.com/ZhengwuFang1)
 
