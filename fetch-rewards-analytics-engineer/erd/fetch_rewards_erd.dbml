@@ -1,0 +1,53 @@
+Table users {
+  user_id varchar [pk]
+  created_date timestamp
+  last_login timestamp
+  state varchar
+  sign_up_source varchar
+  active boolean
+}
+
+Table receipts {
+  receipt_id varchar [pk]
+  user_id varchar [ref: > users.user_id]
+  bonus_points_earned int
+  bonus_points_reason varchar
+  points_earned float
+  purchase_date date
+  purchased_item_count int
+  rewards_status varchar
+  total_spent float
+  create_date timestamp
+  modify_date timestamp
+  date_scanned timestamp
+  finished_date timestamp
+  points_awarded_date timestamp
+}
+
+Table receipt_items {
+  item_id int [pk, increment]
+  receipt_id varchar [ref: > receipts.receipt_id]
+  barcode varchar
+  brand_code varchar
+  description text
+  final_price float
+  item_price float
+  quantity_purchased int
+  needs_fetch_review boolean
+  user_flagged_barcode varchar
+  user_flagged_description text
+  user_flagged_price float
+  user_flagged_quantity int
+}
+
+Table brands {
+  brand_id varchar [pk]
+  name varchar
+  barcode varchar
+  brand_code varchar
+  category varchar
+  category_code varchar
+  top_brand boolean
+}
+
+Ref: receipt_items.barcode > brands.barcode
