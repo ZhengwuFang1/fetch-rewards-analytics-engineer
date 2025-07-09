@@ -1,4 +1,10 @@
--- SQL Dialect: PostgreSQL
+-- Question 5: Brand with Highest Total Spend (Recent Users Only)
+-- ---------------------------------------------------------------
+-- Identifies the brand with the most total spend among users created
+-- in the past 6 months. Useful for tracking brand effectiveness on
+-- newly acquired users.
+-- Filters users by creation date, then sums receipt totalSpent by brand.
+-- Dialect: PostgreSQL
 
 WITH recent_users AS (
   SELECT user_id
