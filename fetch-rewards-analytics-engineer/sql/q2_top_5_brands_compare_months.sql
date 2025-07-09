@@ -1,4 +1,9 @@
--- SQL Dialect: PostgreSQL
+-- Question 2: Comparison of Top 5 Brand Rankings (Current vs Previous Month)
+-- -------------------------------------------------------------------------
+-- Compares receipt counts and ranks for top brands in the current vs.
+-- previous month. Shows how top 5 brands shifted month-over-month.
+-- Uses RANK window function and CTEs to break down receipt counts by month.
+-- Dialect: PostgreSQL
 
 WITH month_bounds AS (
   SELECT
