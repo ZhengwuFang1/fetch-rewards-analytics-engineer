@@ -1,5 +1,10 @@
--- SQL Dialect: PostgreSQL
--- Total number of items purchased from receipts with status 'Accepted' or 'Rejected'
+-- Question 4 (Alternate View): Total Number of Items by Receipt Status
+-- --------------------------------------------------------------------
+-- Calculates the total number of items purchased for receipts marked
+-- “Accepted” vs. “Rejected” using purchased_item_count.
+-- Answers which status group contributes more volume of items overall.
+-- Dialect: PostgreSQL
+
 
 SELECT
   rewards_status,
