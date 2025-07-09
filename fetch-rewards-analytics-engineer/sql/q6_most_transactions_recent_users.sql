@@ -1,4 +1,10 @@
--- SQL Dialect: PostgreSQL
+-- Question 6: Brand with Most Transactions (Recent Users Only)
+-- -------------------------------------------------------------
+-- Finds the brand associated with the most unique transactions
+-- (i.e., receipts) among users who joined within the last 6 months.
+-- Joins users → receipts → receipt_items → brands.
+-- Counts distinct receipt_ids by brand.
+-- Dialect: PostgreSQL
 
 WITH recent_users AS (
   SELECT user_id
