@@ -1,4 +1,9 @@
--- SQL Dialect: PostgreSQL
+-- Question 1: Top 5 Brands by Receipts Scanned (Most Recent Month)
+-- This query returns the top 5 brands ranked by number of receipts scanned 
+-- during the most recent calendar month in the receipts data.
+-- It joins receipts → receipt_items → brands and filters on purchase_date.
+-- Dialect: PostgreSQL
+
 
 WITH most_recent_month AS (
   SELECT DATE_TRUNC('month', MAX(purchase_date)) AS month_start
