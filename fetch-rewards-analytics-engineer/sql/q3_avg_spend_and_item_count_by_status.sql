@@ -1,4 +1,9 @@
--- SQL Dialect: PostgreSQL
+-- Question 3 & 4: Average Spend and Total Items by Receipt Status
+-- ---------------------------------------------------------------
+-- Calculates average spend and total items purchased from receipts
+-- grouped by rewardsReceiptStatus (Accepted vs Rejected).
+-- Helps compare user behavior and purchasing trends by status group.
+-- Dialect: PostgreSQL
 
 SELECT
   rewards_status,
